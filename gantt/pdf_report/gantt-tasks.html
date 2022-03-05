@@ -1,0 +1,633 @@
+<html xmlns:ganttproject="http://ganttproject.sf.net/">
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>GanttProject - gantt</title>
+        <style>
+	    A:link {
+		FONT-WEIGHT: bold;  TEXT-DECORATION: none;
+		FONT-SIZE: 14px ; COLOR: black;
+	    }
+	    A:visited {
+		FONT-WEIGHT: bold;  TEXT-DECORATION: none;
+		FONT-SIZE: 14px ; COLOR: black; BACKGROUND: none
+	    }
+	    A:hover {
+		FONT-WEIGHT: bold;  TEXT-DECORATION: none;
+		FONT-SIZE: 14px ; COLOR: white ; BACKGROUND: #6d9ec6;
+	    }
+	    .notes {
+	      padding-left: 10px;
+	    }
+	    .notes pre {
+	      font-family: Arial, Helvetica;
+	      font-size: 10px;
+	      margin-top: 0px;
+	      padding-top: 0px;
+	      margin-bottom: 5px;
+	    }
+	    .attachment {
+	      padding-left: 10px;
+	    }
+	    .attachment a:link {
+	      font-weight: normal;
+	      font-size: 12px;
+	      color: #6d9ec6;
+	      background: white;
+	    }
+	    .attachment a:hover {
+	      font-weight: normal;
+	      text-decoration: underline;
+	      font-size: 12px;
+	      color: #6d9ec6;
+	      background: white;
+	    }
+	    .attachment a:visited {
+	      font-weight: normal;
+	      font-size: 12px;
+	      background: white;
+	      color: gray;
+	    }
+	    TD {
+		FONT-SIZE: 12px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: Arial, Helvetica, Geneva, sans-serif
+	    }
+	    UL {
+		FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, Geneva, sans-serif
+	    }
+	    LI {
+		FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, Geneva, sans-serif
+	    }
+	    H1 {
+		FONT-WEIGHT: bold; FONT-SIZE: 16pt; COLOR: #6d9ec6;
+	    }
+	    H2 {
+		FONT-WEIGHT: bold; FONT-SIZE: 16pt; COLOR: #000000;
+	    }
+	    H3 {
+		FONT-WEIGHT: bold; FONT-SIZE: 13pt; COLOR: #6d9ec6;
+	    }
+	    H4 {
+		FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #000000;
+	    }
+	    H5 {
+		FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #6d9ec6;
+	    }
+	    H6 {
+		FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #000000
+	    }
+
+	    </style>
+    </head>
+    <body bgcolor="white">
+        <center>
+            <style>
+div.project_name {
+  font-size: 150%;
+  color: black;
+  font-weight: bold;
+  border-top: solid #6d9ec6 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+}
+div.page_links {
+  background: #6d9ec6;
+  text-align: center;
+}
+</style>
+            <center>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td bgcolor="#dddddd">
+                            <div class="project_name">projet_l3_eea</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="page_links">
+                                <a href="gantt.html"></a>  |
+          <a href="gantt-chart.html">Gantt</a> |
+          <a href="gantt-tasks.html">Tasks</a> |
+          <a href="gantt-resources.html">Resources</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+            <br>
+            <style>
+td.header {
+  background: #dddddd;
+  margin: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 2px;
+  padding-bottom:1px;
+  border-bottom: solid black 2px;
+}
+td.cell {
+  margin: 0;
+  margin-top: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 2px;
+  padding-bottom:1px;
+}
+div.cell {
+}
+h5.header {
+  margin-left: 2px;
+  margin-top: 2px;
+}
+</style>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" class="header">
+                        <h5 class="header">Name</h5>
+                    </td><td valign="top" class="header">
+                        <h5 class="header">Begin date</h5>
+                    </td><td valign="top" class="header">
+                        <h5 class="header">End date</h5>
+                    </td><td valign="top" class="header">
+                        <h5 class="header">Resources</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0em">
+                            <div style="margin: 0; padding: 0; text-align: ;">Demarrage du projet</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">07/12/21</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">03/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell"></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">choix du sujet</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">07/12/21</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">17/12/21</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">prise de contact</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">18/01/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">20/01/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">d&eacute;finition cahier des charges</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">21/01/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">04/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">etude technique QEPAS</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">21/01/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">11/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">def architecture</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">07/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">14/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">choix du mat&eacute;riel</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">15/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">22/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">plannification / gantt</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">23/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">03/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0em">
+                            <div style="margin: 0; padding: 0; text-align: ;">Programmation</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">04/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell"></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">acquisition des mesure</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">10/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">trac&eacute; des mesures</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">10/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">interface graphique</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">10/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">enregistrement des donn&eacute;es</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">25/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">08/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">assemblage logiciel</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">11/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">19/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">tests / debugging</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">20/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">04/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0em">
+                            <div style="margin: 0; padding: 0; text-align: ;">Materiel</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">28/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell"></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">cablage prototype breadboard</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">10/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">etalonnage capteurs</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">11/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">25/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">modelisation boitier</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">24/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">07/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">impression boitier</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">08/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">14/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">assemblage dans boitier</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">15/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">15/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">correctifs / mise au point</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">19/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">28/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0em">
+                            <div style="margin: 0; padding: 0; text-align: ;">Essais / Vcalidation des performances</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">29/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">12/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell"></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">campagne mesures MQ</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">29/04/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">03/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">campagne mesures QEPAS</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">04/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">09/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">analyse resultats / performances</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">10/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">12/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0em">
+                            <div style="margin: 0; padding: 0; text-align: ;">Suivi / Rapport / Soutenance</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">25/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">30/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell"></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">redaction rapport</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">25/02/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">23/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">preparation soutenance</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">10/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">30/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">mise a jour Gantt</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">07/03/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">30/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">Cheick Sylla, Nicolas Dressayre</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0em">
+                            <div style="margin: 0; padding: 0; text-align: ;">Soutenance</div>
+                            <div class="notes">
+                                <pre width="40">La soutenance a habituellement lieu la derni&egrave;re semaine de mai / 1ere semaine de juin.</pre>
+                            </div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">30/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell">
+                        <div style="margin:0; padding:0; padding-left:0.5em">
+                            <div style="margin: 0; padding: 0; text-align: ;">30/05/22</div>
+                        </div>
+                    </td><td valign="top" class="cell"></td>
+                </tr>
+            </table>
+        </center>
+        <br>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td bgcolor="#6d9ec6" width="50%"><font color="#FFFFFF"><b>Ganttproject (3.2.3221)</b></font></td><td bgcolor="#6d9ec6" width="50%" align="right"><b><a href="http://ganttproject.biz">ganttproject.biz</a></b>
+                    <br>
+                    <b>05/03/22 - 12:41:55 PM</b></td>
+            </tr>
+        </table>
+    </body>
+</html>
