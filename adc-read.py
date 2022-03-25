@@ -4,6 +4,7 @@
 
 # activer le bus I2C dans les parametres de la raspi
 
+from multiprocessing.connection import wait
 import board
 import busio
 i2c = busio.I2C(board.SCL, board.SDA) #initialisation du bus I2C
@@ -21,3 +22,6 @@ chan = AnalogIn(ads, ADS.P0, ADS.P1) #creation d'un canal differentiel
 
 #effectuer un mesure simple     -> ads.mode = Mode.SINGLE
 #effectuer un mesure continue   -> ads.mode = Mode.CONTINUOUS
+
+while 1:
+    wait(3)
