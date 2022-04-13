@@ -14,7 +14,7 @@ def ecrireLigne(humidity, temperature, temps):
     with open('data.csv', 'a') as csv_file:
         csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         info = {
-            "temps": time,
+            "temps": temps,
             "temperature": temperature,
             "humidite": humidity
         }
@@ -24,18 +24,19 @@ def ecrireLigne(humidity, temperature, temps):
 with open('data.csv', 'w') as csv_file:
     csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
     csv_writer.writeheader()
-
+    
 while True:
 
     humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN)
     t = time.localtime();
     current_time = time.strftime("%H:%M:%S",t)
     if humidity is not None and temperature is not None:
-        print("Time =% Temp={0:0.1f}*C  Humidity={1:0.1f}%".format(current_time, temperature, humidity))
+        print("temps=",current_time)
+        print("temp={0:0.1f}*C  humidity={1:0.1f}%".format(temperature, humidity))
+        print("----------------------------------")
     else:
         print("Failed to retrieve data from humidity sensor") 
 
     ecrireLigne(humidity, temperature, current_time)
 
-    
-    time.sleep(0.5)
+    time.sleep(0.1)

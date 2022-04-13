@@ -53,6 +53,7 @@ def animate(index):
 
 ani = FuncAnimation(plt.gcf(), animate, interval=500)
 
+
 plt.tight_layout()
 plt.grid(True)
 plt.show()
