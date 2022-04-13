@@ -38,4 +38,4 @@ while True:
 
     x_value += 1 
     
-    time.sleep(1)
+    time.sleep(100)
