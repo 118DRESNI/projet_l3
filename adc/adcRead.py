@@ -27,7 +27,7 @@ ads.gain = 1
 ads.mode = Mode.SINGLE
 #effectuer un mesure continue   -> ads.mode = Mode.CONTINUOUS
 
-def lireAdc(channel):
+def lireAdc():
     CO2 = round(chanCO2.voltage,3)
     CO = round(chanCO.voltage,3)
     gaz = [CO,CO2]
