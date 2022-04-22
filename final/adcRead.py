@@ -7,7 +7,6 @@
 from multiprocessing.connection import wait
 import board
 import busio
-import time
 i2c = busio.I2C(board.SCL, board.SDA) #initialisation du bus I2C
 
 import adafruit_ads1x15.ads1115 as ADS #import du module ADS1115 -> renommer ADS 
@@ -24,12 +23,10 @@ chanCO = AnalogIn(ads, ADS.P1) #creation d'un canal canal de lecture CO
 ads.gain = 1
 
 #effectuer un mesure simple     -> ads.mode = Mode.SINGLE
-ads.mode = Mode.SINGLE
 #effectuer un mesure continue   -> ads.mode = Mode.CONTINUOUS
 
 def lireAdc():
     CO2 = round(chanCO2.voltage,3)
     CO = round(chanCO.voltage,3)
     gaz = [CO,CO2]
-    print("tension CO2 : " + str(CO2) + "V" + " | " + "tension CO : " + str(CO) + "V")
     return gaz 
