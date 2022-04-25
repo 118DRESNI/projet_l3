@@ -20,7 +20,7 @@ def newLine(chemin, Temp, Gaz):
 		info = {
 			"temps": current_time,
 			"temperature": Temp[0],
-			"humidite": Temp[1],
+			"humidite": humi[1],
 			"CO2": Gaz[0],
 			"CO": Gaz[1]
 			}	
