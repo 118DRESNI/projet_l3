@@ -4,6 +4,7 @@ import time
 import tabShape as ts
 import display as dp
 import convPPM as cv
+import dhtRead as dht
 
 
 #un fichier csv qui contient des données issues d'une acquisition
@@ -56,7 +57,7 @@ while(1):
 
 	PPM =cv.conv_volt2ppm(ADC)
 
-	tab, indice = ts.ajoutLigne(tab, numligne, PPM,indice)
+	tab, indice = ts.ajoutLigne(tab, numligne,PPM,indice)
 	
 	#dp.affMes(tab, graphe)
 	
