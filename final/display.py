@@ -1,35 +1,29 @@
-import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 
-# rappel sur les fieldnames : 
-# fieldnames = ["temps", "temperature", "humidite", "CO2", "CO"]
+#	CO2 	= ADC[0]
+#	CO 	    = ADC[1]
+#	NTC  	= ADC[2]
+#	QEPAS	= ADC[3]
 
-tempPath = "data.csv"
+def initGraph():
+    fig = plt.figure()
+    return fig
 
-def afficher (tempPath):
+
+def affMes(ADC, fig):
     
-    plt.style.use('dark_background')
-
-    data = pd.read_csv(tempPath)
-    x = data['temps']
-    temp = data['temperature']
-    humid = data['humidite']
-    co2 = data['CO2']
-    co = data['CO']
-
-    plt.cla() #effacement du plot
-
-    plt.plot(x, temp,'r', label='temperature')
-    plt.plot(x, humid,'g', label='humidité')
-    plt.plot(x, co2,'b', label='co2')
-    plt.plot(x, co,'m', label='co')
-
-    plt.legend(loc='upper left')
-    plt.tight_layout()
-
-    plt.tight_layout()
+    fig.clear()
+    
+    CO2 	= ADC[0]
+    CO 	    = ADC[1]
+    NTC  	= ADC[2]
+    QEPAS	= ADC[3]
+    
+    taille = len(CO2)
+    
+    AxeX = np.linspace(0, taille-1, taille)
+    
+    plt.plot(AxeX, CO2)
+    plt.draw()
     plt.grid(True)
-    plt.show()
-
-
-afficher(tempPath)

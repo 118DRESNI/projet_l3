@@ -14,8 +14,10 @@ from adafruit_ads1x15.analog_in import AnalogIn #import de la version ADS1115 de
 
 ads = ADS.ADS1115(i2c) #creation de l'objet ADC
 
-chanCO2 = AnalogIn(ads, ADS.P0) #creation d'un canal canal de lecture CO2
-chanCO = AnalogIn(ads, ADS.P1) #creation d'un canal canal de lecture CO
+chanCO2     = AnalogIn(ads, ADS.P0) #creation d'un canal canal de lecture CO2
+chanCO      = AnalogIn(ads, ADS.P1) #creation d'un canal canal de lecture CO
+chanNTC     = AnalogIn(ads, ADS.P2) #creation d'un canal canal de lecture température thermistance
+chanQEPAS   = AnalogIn(ads, ADS.P3) #creation d'un canal canal de lecture QEPAS
 
 #pour lire la tension -> chan.voltage
 #pour lire la valeur  -> chan.value
@@ -25,8 +27,30 @@ ads.gain = 1
 #effectuer un mesure simple     -> ads.mode = Mode.SINGLE
 #effectuer un mesure continue   -> ads.mode = Mode.CONTINUOUS
 
-def lireAdc():
-    CO2 = round(chanCO2.voltage,3)
-    CO = round(chanCO.voltage,3)
-    gaz = [CO,CO2]
-    return gaz 
+ADC = [0,0,0,0]
+
+def lireAdc(EnCO2, EnCO, EnNTC, EnQEPAS):
+    if EnCO2 == True: 
+        CO2     =   round(chanCO2.voltage,  3)
+    else:
+        CO2     =   0
+    if EnCO == True: 
+        CO      =   round(chanCO.voltage,   3)
+    else:
+        CO     =   0    
+    if EnNTC == True: 
+        NTC     =   round(chanNTC.voltage,  3)
+    else:
+        NTC     =   0    
+    if EnQEPAS == True: 
+        QEPAS   =   round(chanQEPAS.voltage,3)
+    else:
+        QEPAS     =   0  
+          
+    ADC[0]  = CO2
+    ADC[1]  = CO
+    ADC[2]  = NTC
+    ADC[3]  = QEPAS
+    return ADC 
+
+

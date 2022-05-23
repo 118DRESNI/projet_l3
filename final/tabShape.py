@@ -1,26 +1,43 @@
 import time
 import numpy as np
 
-taille = 12
-numcol = 4
-index = 0
-DHT = [1, 2]
-gaz = [3, 4]
 
-def creerTab(numcol, taille):
-    tab = np.zeros((taille, numcol), int)
 
+#donnees = [0,1,2,3,4]
+#numligne = 10
+#indice = 0
+
+#ctr = 0
+
+def creerTab(numligne, donnees):
+    numcol = len(donnees)
+    tab = np.zeros((numligne, numcol))
     return tab
 
-def ajoutLigne(tab, DHT,gaz,taille,index):
-    if index < taille:
-        tab[index] = [DHT[0], DHT[1], gaz[0], gaz[1]]
-        index = index + 1
+def ajoutLigne(tab, numligne, donnees,indice):
+    if indice < numligne:
+        tab[indice] = donnees
+        indice = indice + 1
     else:
-        index = 0
-    return tab, index
-tab = creerTab(numcol, taille)
-print (tab)
-while index < taille:
-    tab = ajoutLigne(tab, DHT,gaz,taille,index)
-    print (tab)
+        tab = np.roll(tab, -1, axis = 0)
+        tab[numligne - 1] = donnees
+    return tab, indice
+
+# test
+#tab = creerTab(numligne, donnees)
+#print (tab)
+
+#while 1:
+#    tab, indice = ajoutLigne(tab, numligne, donnees,indice)
+#    print (tab)
+#    print (indice)
+#    print (ctr)
+#    donnees = np.roll(donnees,1)
+#    
+#    if ctr == 20:
+#        donnees = [5,6,7,8,9]
+#    
+#    ctr = ctr + 1
+#     
+#    time.sleep(1)
+    
